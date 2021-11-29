@@ -52,6 +52,9 @@ driver.quit()
   <p>Now we want to count the number of cookies. </p>
   <p> cookie=driver.find_element_by_id("big cookie") </p>
   <p>cookie_count=driver.find_element_by_id("cookies") </p>
+  <p>driver.implicitly_wait(5) this will make them to wait for 5 seconds before going to the next line. </p>
+  
+  
   
 
 
