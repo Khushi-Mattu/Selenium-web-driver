@@ -1,5 +1,8 @@
 # Selenium
 <p>
+  This is not a work of my own. This is only my interpretation of what I have learnt after watching the tutorial series and documentation whose links
+  I have added in the bibliography.
+  
   First we have to download the web driver from chrome. Then first import webdriver from selenium. Then we have to specify the path of the webdriver. 
   </p>
   <p> We have to get the url by using driver.get("url"). To close the tab we can do driver.close() but to close the entire browser we have to use driver.quit(). we can get the title of the page by print(driver.title)</p>
@@ -53,6 +56,68 @@ driver.quit()
   <p> cookie=driver.find_element_by_id("big cookie") </p>
   <p>cookie_count=driver.find_element_by_id("cookies") </p>
   <p>driver.implicitly_wait(5) this will make them to wait for 5 seconds before going to the next line. </p>
+  <p>items=[driver.find_element_by_id("productPrice"+str(i)) for i in range(1,-1,-1)] <p>
+  <p> This will load all elements with id product price with string i.</p>
+  <p> we want to upgrade cursor as much as grandma. But we will upgrade grandma first. </p>
+  <p> actions.click(cookie) which is pressing that cookie </p>
+  <p>for i in range(0,5000):
+    actions.perform()
+  This will basically do the action of clicking the cookies a 5000 times. </p>
+  <p>
+  for i in range(0,5000):
+    actions.perform()
+    count=int(cookie_count.text.split(" ")[0])
+    print(count)
+    for item in items:
+        value=int(item.text)
+        if value<=count:
+            upgrade_actions=ActionChains(driver)
+            upgrade_actions.move_to_element(item)
+            upgrade_actions.click()
+            upgrade_actions.perform()
+                        This will help to count the number of cookies and show the count. </p> 
+  <h2> Unit Test Framework </h2>
+  <p>
+  We can use classes which contains the test cases we want that should be performed.
+  We can put all variables or all the setup required in the def setup(self).
+  self.driverwebdriver.Chrome(" PATH ")
+  self.driver.get("url")
+  The setup will run in the beginning.
+  For the end,
+  def tearDown(self):
+    self.driver.close()
+  def test_example():
+  if we include this in between, it will run automatically.
+  but if we write def not_a_test it wont run because it doesnt start with test.
+  All this is because of unittest.
+  </p>
+  <p> if name=="_main_":
+          unittest.main()
+  This will run all the unit tests we have defined. </p>
+  <p>The base page will be the base class for all of our pages.
+  In this baseclass we will define a class for each page we will test.
+  Locator.py is for any way we locate an element it should be in one place.
+  We also dont have to change any other aspect of the code.
+  Main page locators is a class for main page locators. All main page locators should come here.
+  search results page locator is a class for search results locators. All search results locators should come here.
+  element = self.driver.find_element(MainPageLocators.GO_BUTTON)
+  Now here if I put a * in front of MainPageLocators,
+  for example take a tuple (1,2) without * we re just passing (1,2) but with the * we are passing (*(1,2))
+  Its called unpack.
+  Base page class that is initialized on every page object class.
+  __ __ is the dunder path which is part of python data model.
+  </p>
+  <p>In test_search_in_python_org, we first load the main page, then we assert the main page, then we will check if search text element is pycon
+  then the click_go_button is to search for it, then it will give the search result page. Finally it will tell if we got any results.
+  </p>
+  
+  <h2>Bibliography </h2>
+  <p>
+  1. https://selenium-python.readthedocs.io/installation.html (This is the documentation. It is not official but a great one to learn selenium from)
+  2. https://www.youtube.com/playlist?list=PLzMcBGfZo4-n40rB1XaJ0ak1bemvlqumQ
+  I learnt Selenium from these two and the tutorial playlist is awesome and so is the documentation. </p>
+  
+  
   
   
   
