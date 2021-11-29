@@ -113,8 +113,8 @@ driver.quit()
   
   <h2>Bibliography </h2>
   <p>
-  1. https://selenium-python.readthedocs.io/installation.html (This is the documentation. It is not official but a great one to learn selenium from)
-  2. https://www.youtube.com/playlist?list=PLzMcBGfZo4-n40rB1XaJ0ak1bemvlqumQ
+  1. https://selenium-python.readthedocs.io/installation.html (This is the documentation. It is not official but a great one to learn selenium from)<br/>
+  2. https://www.youtube.com/playlist?list=PLzMcBGfZo4-n40rB1XaJ0ak1bemvlqumQ <br/>
   I learnt Selenium from these two and the tutorial playlist is awesome and so is the documentation. </p>
   
   
